@@ -1,0 +1,144 @@
+:root {
+    --primary1: white;
+    --primary2: #001E41;
+    --secondary1: #E5E5E5;
+    --accent1: #5D78FF;
+    --font1: #7D7D7D;
+}
+
+* {
+    background-color: var(--primary1);
+    font-family: "Source Sans 3", sans-serif;
+}
+
+#nav {
+    height: 49px;
+    border-bottom: 1px solid var(--secondary1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#nav a {
+    color: var(--font1);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+button {
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    color: var(--accent1);
+    padding: 6px 24px;
+    border-radius: 8px;
+}
+
+.nav__button__control {
+    border: none;
+}
+
+.nav__button__control:active, .nav__button__control::after, .nav__button__control:focus {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+}
+
+button:disabled {
+    opacity: 0.7;
+}
+
+#nav .nav__button__contact {
+    color: var(--primary1);
+    background-color: var(--accent1);
+}
+
+.nav__desctop__buttons {
+    display: none;
+}
+
+.nav__buttons {
+    display: block;
+}
+
+.icons__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__burger__icon, .logo__icon {
+    position: absolute;
+    top: 20px;
+    
+}
+
+.nav__burger__icon {
+    stroke: var(--primary2);
+    width: 22px;
+    height: 10px;
+    right: 10px
+}
+
+.nav__close__icon {
+    stroke: var(--primary2);
+    fill: var(--primary2);
+    height: 20px;
+    width: 20px;
+    display: none;
+    /* ADD HIDE\SHOW ICON!!!!!!!!!!!!//////////////////////////////////////////////////////////////////////////////////////////////////// */
+}
+
+.logo__icon {
+    width: 89px;
+    height: 21px;
+    top: 15px;
+    left: 10px;
+}
+
+.nav__links__wrap {
+   padding: 20px 10px;
+   border-bottom: 1px solid var(--secondary1);
+}
+
+@media screen and (min-width: 992px) {
+    #nav {
+        height: 77px;
+        padding: 0 92px;
+    }
+    .nav__links__wrap {
+        padding: 0;
+        border: none;
+     }
+    .nav__burger__icon, .logo__icon {
+        position: unset;
+        
+    }
+    .logo__icon {
+        width: 140px;
+        height: 34px;
+    }
+    .nav__inner {
+        display: flex;
+        justify-content: center;
+    }
+    .nav__desctop__buttons {
+        display: block;
+    }
+    .nav__buttons {
+        display: none;
+    }
+}
+
+.navbar__button {
+    
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    height: 100%; */
+}
+
