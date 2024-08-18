@@ -264,21 +264,21 @@ button:disabled {
 }
 
 #section__slider .slider__item {
-    max-width: 340px;
+    max-width: 90vw;
     height: 372px;
     padding: 20px 30px 20px 20px;
     display: flex;
     flex-direction: column;
     position: relative;
     background-color: var(--primary4);
-    gap: 20px;
+    gap: 10px;
     color: var(--font2);
     font-size: 12px;
-    font-weight: 500;
     border-radius: 10px;
+    letter-spacing: 0.25;
 }
 
-#section__slider h2 {
+#section__slider h4 {
     font-size: 17px;
     font-weight: 700; 
 }
@@ -301,8 +301,69 @@ button:disabled {
     font-weight: 700;
 }
 
+ 
+
+
+
+#section__slider .slick-dots {
+    list-style-type: none;
+    height: 10px;
+    width: 90px;
+    display: flex!important;
+    flex-direction: row!important;
+    justify-content: center;
+    width: 100%;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+#section__slider button {
+    cursor: pointer;
+    padding: 0;
+    max-width: 10px;
+    height: 10px;
+    background-color: var(--primary4);
+    color: transparent;
+}
+
+
+#section__slider li.slick-active button {
+    background-color: var(--accent1);
+}
+
+#section__slider li.slick-active button::after, button:active {
+    box-shadow: none;
+    border: none;
+}
+
+#section__slider .slick-slide {
+    margin: 0 13px;
+} 
+
+#section__slider .slider__icon {
+    width: 0;
+    height: 0;
+}
 
 /* Responsive section */
+@media screen and (min-width: 1240px) {
+    #section__slider .slider__icon {
+        cursor: pointer;
+        height: 28px;
+        width: 28px;
+        position: absolute;
+        top: -77px;
+    }
+    #section__slider .icon__prev {
+        right: 128px;
+    }
+    #section__slider .icon__next {
+        right: 92px;
+    } 
+    #section__slider .slick-dots button {
+        display: none;
+    }
+}
 
 @media screen and (min-width: 1100px) {
     #section__info {
@@ -398,10 +459,9 @@ button:disabled {
         width: 302px;
         font-size: 14px;
     }
-    #section__slider h2 {
+    #section__slider h4 {
         font-size: 16px;
     }
-    
 }
 
 @media screen and (min-width: 620px) {
@@ -433,5 +493,11 @@ button:disabled {
         top: 197px;
         left: -115px;
     }
+}
+
+@media screen and (min-width: 360px) {
+    #section__slider .slider__item {
+        max-width: 340px;
+    } 
 }
 

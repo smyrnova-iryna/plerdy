@@ -23,6 +23,11 @@ const sliderData = [
         id: 5,
         heading: "The analysis of both the desktop and mobile versions of the website",
         text: "n some areas, websites generate more than 60% of the traffic from their mobile versions, so it would be unwise not to audit the behavior of mobile users. With the Plerdy heatmap, you can run a UX auditing analysis separately for the desktop and mobile versions of your website."
+    },
+    {
+        id: 6,
+        heading: "The analysis of both the desktop and mobile versions of the website",
+        text: "n some areas, websites generate more than 60% of the traffic from their mobile versions, so it would be unwise not to audit the behavior of mobile users. With the Plerdy heatmap, you can run a UX auditing analysis separately for the desktop and mobile versions of your website."
     }
 ]
 
@@ -40,17 +45,18 @@ $(document).ready(function(){
         `);
       });
     
- 
-
 
     $('.slider').slick({
         dots: true,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        // centerMode: true,
-        variableWidth: true
+        variableWidth: true,
+        arrows: true,
+        prevArrow:`<svg class="slider__icon icon__prev"><use xlink:href="./sprite.svg#icon-prev"></use></svg>`,
+        nextArrow: `<svg class="slider__icon icon__next"><use xlink:href="./sprite.svg#icon-next"></use></svg>`
         });
+        
   });
 
 
