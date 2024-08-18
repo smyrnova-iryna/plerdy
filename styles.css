@@ -2,6 +2,8 @@
     --primary1: white;
     --primary2: #001E41;
     --primary3: #E2F2FF;
+    --primary4: #F8F8FA;
+    --primary5: #E3EEFF;
     --secondary1: #E5E5E5;
     --accent1: #5D78FF;
     --font1: #7D7D7D;
@@ -244,6 +246,61 @@ button:disabled {
 }
 
 
+/* Slider section */
+
+#section__slider {
+    margin: 40px 10px 15px 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+#section__slider h2 {
+    font-size: 20px;
+    color: var(--font3);
+    margin-bottom: 15px;
+}
+
+#section__slider h2 span {
+    color: var(--font2);
+}
+
+#section__slider .slider__item {
+    max-width: 340px;
+    height: 372px;
+    padding: 20px 30px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--primary4);
+    gap: 20px;
+    color: var(--font2);
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+#section__slider h2 {
+    font-size: 17px;
+    font-weight: 700; 
+}
+
+#section__slider .slider__id {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 30px 10px 0;
+    bottom: -16px;
+    right: 0;
+    background-color: var(--primary5);
+    color: var(--primary1);
+    font-size: 48px;
+    height: 109px;
+    width: 109px;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 10px;
+    font-weight: 700;
+}
+
 
 /* Responsive section */
 
@@ -256,6 +313,7 @@ button:disabled {
 
     #section__info h2 {
         max-width: 611px;
+        font-size: 32px;
     }
 }
 
@@ -325,9 +383,28 @@ button:disabled {
         width: 94px;
         height: 24px;
     }   
+
+    #section__slider {
+        margin: 100px 0 74px 92px;
+    }
+
+    #section__slider h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+
+    #section__slider .slider__item {
+        width: 302px;
+        font-size: 14px;
+    }
+    #section__slider h2 {
+        font-size: 16px;
+    }
+    
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 620px) {
     #section__info {
         gap: 106px;
     }
