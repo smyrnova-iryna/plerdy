@@ -26,9 +26,8 @@
               <a class="navbar-brand" href="#">
                 <svg class="logo__icon"><use xlink:href="./sprite.svg#icon-Logo"></use></svg>
               </a>
-              <button class="navbar-toggler nav__button__control" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <button id="nav__toggle" class="navbar-toggler nav__button__control" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <svg class="nav__burger__icon"><use xlink:href="./sprite.svg#icon-Group-7025"></use></svg> 
-                <svg class="nav__close__icon"><use xlink:href="./sprite.svg#icon-close"></use></svg></button>
               </button>
               <div class="collapse navbar-collapse nav__inner" id="navbarNavAltMarkup">
                 <div class="navbar-nav nav__links__wrap">
@@ -36,9 +35,9 @@
                   <a class="nav-link" href="#">Use Cases</a>
                   <a class="nav-link" href="#">Book a Demo</a>
                   <div class="nav__buttons">
-                    <button class="nav__button__contact">Contact sales</button>
+                    <button class="nav__button__contact toggle__popup">Contact sales</button>
                     <button>Sign in</button>
-                </div>
+                  </div>
                 </div>
                 
               </div>
@@ -46,7 +45,7 @@
             </div>
             <div class="nav__desctop__buttons">
                 <button class="nav__button__signin">Sing In</button>
-                <button>Contact sales</button>
+                <button class="toggle__popup">Contact sales</button>
             </div>
         </nav>
         <section id="section__info">
@@ -54,7 +53,7 @@
                 <h2>How to do a Website Audit to Improve SEO & Conversions</h2>
                 <p>Usability auditing with the Plerdy tool is a comprehensive expert assessment of your website based on a profound study of user behavior registered on it. Plerdy will provide you with crucial data based on which you will be able to run an efficient usability audit of your website, identify and fix SEO issues, and subsequently lead it to higher positions in search.</p>
                 <p class="section__info__description">Thus, you'll compile a list of flaws in your website interface, navigation, and conversion path that can eventually affect its micro and macro conversion rates.</p>
-                <button>Run the Plerdy tool</button>
+                <button class="toggle__popup">Run the Plerdy tool</button>
                 <p>Trusted by some of the world's largest enterprises</p>
                 <div class="section__info__logo__container">
                     <img class="logo__softserve" src="./img/softserve.png" alt="softserve logo">
@@ -79,8 +78,58 @@
             <h2><span class="highlighted__heading">6 Reasons</span> to Use Plerdy Data for a Website Usability Audit</h2>
             <div class="slider"></div>
             <div class="section__slider__bottom__container">
-                <button>Boost my website conversion</button>
+                <button class="toggle__popup">Boost my website conversion</button>
                 <p>So, it’s high time for you to stop losing 99% of potential clients due to being unaware of your website users’ behavior patterns and needs.</p>
+            </div>
+        </section>
+        <section id="popup">
+            <div class="popup__image"></div>
+            <div class="popup__container">
+                <div><svg class="icon__popup__close close__popup"><use xlink:href="./sprite.svg#icon-popup-close"></use></svg></div>
+                <h3>How to do a Website Audit to Improve SEO & Conversions</h3>
+                <p>You will get an SMS with a link to the webinar</p>
+                <form class="popup__form" novalidate>
+                    <div class="popup__form__container">
+                        <label class="form__label" for="#input__name">Name</label>
+                        <input type="text" class="form__field" id="input__name" placeholder="Boris Johnson" required>
+                        <label class="form__error" for="#input__name">error</label>
+                        
+                    </div>
+                          <div class="popup__form__container">
+                            <div id="select__toggle" class="form__select">
+                                <svg class="select__arrow"><use xlink:href="./sprite.svg#icon-select__arrow"></use></svg>
+                                <div class="select__option selected__option">
+                                    <svg class="flag"><use xlink:href="./sprite.svg#icon-flag_ukr"></use></svg>
+                                    <span>+380</span>
+                                </div>
+                            </div>
+                            <div id="select__options" class="form__select__dropdown">
+                                <div class="select__option select__extra__option">
+                                    <svg class="flag"><use xlink:href="./sprite.svg#icon-flag_ie"></use></svg>
+                                    <span>+353</span>
+                                </div>
+                                <div class="select__option select__extra__option">
+                                    <svg class="flag"><use xlink:href="./sprite.svg#icon-flag_mo"></use></svg>
+                                    <span>+417</span>
+                                </div>
+                            </div>
+                            <label class="form__label" for="#input__name">Name</label>
+                            <input type="tel" class="form__field form__select__field" id="input__name" placeholder="XX XXX XXXX" required>
+                            <label class="form__error" for="#input__name">error</label>
+                          </div>
+                          <div class="form__buttons">
+                            <button disabled type="button">Support</button>
+                            <button type="submit">Contact sales</button>
+                          </div>
+                </form>
+                <div class="checkbox__wrap">
+                    <input type="checkbox">
+                    <p>By sending up? you agree to our <a href="#">Conditions</a> and <a href="#">Privacy Policy</a></p>
+                </div>
+                <p class="popup__logo__container">
+                    <svg class="icon__popup__logo"><use xlink:href="./sprite.svg#icon-popup-logo"></use></svg>
+                    <span>Powered by <a href="#">Plerdy</a></span>
+                </p>
             </div>
         </section>
     

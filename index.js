@@ -56,6 +56,52 @@ $(document).ready(function(){
         prevArrow:`<svg class="slider__icon icon__prev"><use xlink:href="./sprite.svg#icon-prev"></use></svg>`,
         nextArrow: `<svg class="slider__icon icon__next"><use xlink:href="./sprite.svg#icon-next"></use></svg>`
         });
+
+    
+        let navbarOpened = false;
+
+        $( "#nav__toggle" ).on( "click", function() {
+            if (!navbarOpened) {
+                $( "#nav__toggle" ).html(`<svg class="nav__close__icon"><use xlink:href="./sprite.svg#icon-close"></use></svg>`)
+                navbarOpened = true;
+            } else {
+                $( "#nav__toggle" ).html(`<svg class="nav__burger__icon"><use xlink:href="./sprite.svg#icon-Group-7025"></use></svg>`) 
+                navbarOpened = false
+            }
+        } );
+
+
+        let selectToggled = false;
+
+        $("#select__toggle").on("click", function() {
+            if (!selectToggled) {
+                $( "#select__options" ).show();
+                selectToggled = true;
+            } else {
+                $("#select__options").hide();
+                selectToggled = false
+            }
+        } );
+
+        $(".select__extra__option").on("click", function() {
+            let chosenCode = $(this).html();
+            console.log(chosenCode);
+            $(this).html( $(".selected__option").html());
+            $(".selected__option").html(chosenCode);
+            $("#select__options").hide();
+            selectToggled = false
+        } );
+        
+
+        $( ".toggle__popup" ).on( "click", function() {
+            $("#popup").css("display", "flex");
+        } );
+
+        $( ".close__popup" ).on( "click", function() {
+            $("#popup").hide();
+        } );
+
+
         
   });
 
