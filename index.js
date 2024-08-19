@@ -32,7 +32,6 @@ const sliderData = [
 ]
 
 
-
 $(document).ready(function(){
 
     $.map( sliderData, function( i ) {
@@ -85,13 +84,12 @@ $(document).ready(function(){
 
         $(".select__extra__option").on("click", function() {
             let chosenCode = $(this).html();
-            console.log(chosenCode);
             $(this).html( $(".selected__option").html());
             $(".selected__option").html(chosenCode);
             $("#select__options").hide();
             selectToggled = false
         } );
-        
+
 
         $( ".toggle__popup" ).on( "click", function() {
             $("#popup").css("display", "flex");
@@ -101,9 +99,49 @@ $(document).ready(function(){
             $("#popup").hide();
         } );
 
+    
+        
+        var triggerValidation = false;
+
+        const validateInput = (currentId, errorId) => {
+            if ($(currentId).val().length === 0) {
+                $(currentId).css("border", "1px solid red");
+                $(errorId).show();
+            } else {
+                $(currentId).css("border", "1px solid #BDBDBD");
+                $(errorId).hide();
+            }
+        }
+
+        $( "#submit__button" ).on( "click", function(e) {
+            if ($( "#input__tel" ).val().length === 0 || $( "#input__name" ).val().length === 0) {
+                e.preventDefault();
+                triggerValidation = true;
+                validateInput("#input__tel", "#tel__error");
+                validateInput("#input__name", "#name__error");
+            }
+        } );
+
+
+            $( 'input[name=input__tel]' ).change(function() {
+                validateInput("#input__tel", "#tel__error");
+              } );
+            $( 'input[name=input__name]' ).change(function() {
+                validateInput("#input__name", "#name__error");
+            } );
+
+
+        $('#popup__form .input__name').bind('input', function(){
+            if (triggerValidation) {
+                validateInput("#input__name", "#name__error");
+            }
+        })
 
         
+        $('#popup__form .input__tel').bind('input', function(){
+            if (triggerValidation) {
+                validateInput("#input__tel", "#tel__error");
+            }
+        })
+        
   });
-
-
-

@@ -231,6 +231,15 @@ button:disabled {
     top: -20px;
     left: -33px;
 }
+  
+  #section__info  .diagram1, .diagram2, .diagram3  {
+    animation-timing-function: linear;
+    animation: spin 2s;
+  }
+
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
 
 #section__info .diagram2 {
     width: 132px;
@@ -373,7 +382,6 @@ button:disabled {
 #popup {
     display: flex;
     flex-direction: row;
-    /* position: absolute; */
     position: fixed;
     height: 412px;
     width: 300px;
@@ -488,7 +496,6 @@ button:disabled {
     bottom: 2px;
     left: 2px;
     height: 24px;
-    /* width: 65px; */
     border: none;
     outline: none;
     box-shadow: none;
@@ -865,6 +872,6 @@ button:disabled {
     } 
 }
 
-#popup {
+#popup, #tel__error, #name__error {
     display: none;
 }
