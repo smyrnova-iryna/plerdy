@@ -875,3 +875,12 @@ button:disabled {
 #popup, #tel__error, #name__error {
     display: none;
 }
+
+
+@media screen and (min-width: 360px) {
+    #section__slider .slider__item {
+        max-width: 340px; 
+    
+    } 
+}
+
